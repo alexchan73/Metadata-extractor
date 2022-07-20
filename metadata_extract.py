@@ -3,6 +3,7 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 import os
 import time
+
 def pdf_extract():
     pdf_input = input("Please enter the pdf you want to extract from: ")#test cases 'cover_letter.pdf'
     pdf = pikepdf.Pdf.open(pdf_input)
@@ -29,16 +30,36 @@ def image_extract():
 
 def list_directory(dir_input):
     print(os.listdir(dir_input))
+    
+
 
 def main():
-    print("")
+    print("========================================================================================================================")
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("========================================================================================================================")
+
     user_input = input("Please enter (P) if you wish to extract data from pdf or (I) to extract data from images: ")
     if(user_input == "P"):
         dir_input = input("Please enter directory to search for files: ")
         list_directory(dir_input)
+        while True:
+            cont_input = input("Do you wish to go further into a specific directory?(y/n): ")
+            if(cont_input == "y"):
+                dir_input = input("Please enter directory to search for files: ")
+                list_directory(dir_input)
+            elif(cont_input == "n"):
+                break
         pdf_extract()
+        
     elif(user_input == "I"):
-        dir_input = input("Please enter directory to search for files: ")
+        dir_input = input("Please enter directory to search for files (I can list out all directories, i.e /home): ")
         list_directory(dir_input)
+        while True:
+            cont_input = input("Do you wish to go further into a specific directory?(y/n): ")
+            if(cont_input == "y"):
+                dir_input = input("Please enter directory to search for files: ")
+                list_directory(dir_input)
+            elif(cont_input == "n"):
+                break
         image_extract()
 main()
