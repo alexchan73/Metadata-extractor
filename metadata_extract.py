@@ -31,6 +31,7 @@ def list_directory(dir_input):
     print(os.listdir(dir_input))
 
 def main():
+    print("")
     user_input = input("Please enter (P) if you wish to extract data from pdf or (I) to extract data from images: ")
     if(user_input == "P"):
         dir_input = input("Please enter directory to search for files: ")
