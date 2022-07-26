@@ -3,12 +3,11 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 import os
 import time
-
+#i have made this change 
 def pdf_extract():
     pdf_input = input("Please enter the pdf you want to extract from: ")#test cases 'cover_letter.pdf'
     pdf = pikepdf.Pdf.open(pdf_input)
     pdf_info = pdf.docinfo
-    pdf_encrypt_info = pdf.encryption
     for key, value in pdf_info.items():
         print(key , ':' , value)
 
@@ -29,16 +28,19 @@ def image_extract():
         print(f"{tag_name:25}: {value}" )
 
 def list_directory(dir_input):
+    my_stack = []
     print(os.listdir(dir_input))
+
     
 
 
 def main():
-    print("".join(("=",)*20))
-    print("".join(("+",)*20))
-    print("".join(("=",)*20))
-   
-
+    print("".join(("=",)*40))
+    print("".join(("+",)*40))
+    print("".join(("=",)*40))
+    
+    #my_stack = []
+    print("This is your current directory you are in: " + os.getcwd())
     user_input = input("Please enter (P) if you wish to extract data from pdf or (I) to extract data from images: ")
     if(user_input == "P"):
         dir_input = input("Please enter directory to search for files: ")
@@ -46,7 +48,9 @@ def main():
         while True:
             cont_input = input("Do you wish to go further into a specific directory?(y/n): ")
             if(cont_input == "y"):
-                dir_input = input("Please enter directory to search for files: ")
+                #my_stack.append(dir_input)
+                #print("This is your directory so far: " + my_stack)
+                dir_input = input("Please enter FULL directory to search for files: ")
                 list_directory(dir_input)
             elif(cont_input == "n"):
                 break
@@ -58,6 +62,7 @@ def main():
         while True:
             cont_input = input("Do you wish to go further into a specific directory?(y/n): ")
             if(cont_input == "y"):
+                
                 dir_input = input("Please enter directory to search for files: ")
                 list_directory(dir_input)
             elif(cont_input == "n"):
