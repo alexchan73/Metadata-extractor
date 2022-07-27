@@ -3,7 +3,7 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 import os
 import time
-#i have made this change 
+#look into incorporating pyexif tool
 def pdf_extract():
     pdf_input = input("Please enter the pdf you want to extract from: ")#test cases 'cover_letter.pdf'
     pdf = pikepdf.Pdf.open(pdf_input)
