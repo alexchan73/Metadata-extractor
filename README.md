@@ -8,12 +8,12 @@ What does it do? : You can enter in any files that have EXIF type data to extrac
 Why did I make this? : To demonstrate my knowledge on extracting EXIF data from files that could be crucial in investigations. 
 
 Disclaimer:
-Do not use this tool for criminal purposes, i.e. stalking,  black hat hacking.
-By doing so, you are subject to criminal penalties
+* Do not use this tool for criminal purposes, i.e. stalking,  black hat hacking.
+* By doing so, you are subject to criminal penalties
 
 TO INSTALL REQUIRED PACKAGES:
-You must have exiftool downloaded onto your system, here is the link: https://exiftool.org/
-To use exiftool in python, you must have pyexiftool installed, here is the link: https://sylikc.github.io/pyexiftool/examples.html
+* You must have exiftool downloaded onto your system, here is the link: https://exiftool.org/
+* To use exiftool in python, you must have pyexiftool installed, here is the link: https://sylikc.github.io/pyexiftool/examples.html
 
 HOW TO USE:
 * In the beginning it will display the current directory you are in such as (Users/alex/Documents), it will then ask you to type in the full directory 
