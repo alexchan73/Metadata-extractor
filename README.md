@@ -6,7 +6,8 @@ Thank you for coming across my program :)
 What does it do? : You can enter in any files that have EXIF type data to extract metadata from. 
 
 Why did I make this? : To demonstrate my knowledge on extracting EXIF data from files that could be crucial in investigations. 
-
+IMPROVEMENTS:
+* Only displays files and color codes them, instead of displaying entire contents. 
 Disclaimer:
 * Do not use this tool for criminal purposes, i.e. stalking,  black hat hacking.
 * By doing so, you are subject to criminal penalties
