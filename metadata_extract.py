@@ -2,6 +2,8 @@
 
 import os
 import time
+import colorama
+from colorama import Fore, Back, Style
 from exiftool import ExifToolHelper
 
 #https://sylikc.github.io/pyexiftool/examples.html      pyexiftool api
@@ -14,7 +16,18 @@ def exif_tool():
                 print(f"Type: {k} = {v}")
 
 def list_directory(usr_input): 
-    print(os.listdir(usr_input))
+    my_list = []
+    for i in os.listdir(usr_input):
+        if i.endswith(".jpg"):
+            my_list.append(i)
+        elif i.endswith(".pdf"):
+            my_list.append(i)
+        elif i.endswith(".txt"):
+            my_list.append(i)
+        elif i.endswith(".png"):
+            my_list.append(i)
+    print(Fore.BLUE + str(my_list))
+    #print(os.listdir(usr_input))
 
 def main():
     print("".join(("=",)*40))
@@ -31,7 +44,7 @@ def main():
             usr_input = input("Please enter directory to search for files:  ")
             list_directory(usr_input)
         elif(cont_input.upper() == "N"):
-            list_directory(usr_input)
+            #list_directory(usr_input)
             break
     exif_tool()
     
