@@ -26,7 +26,7 @@ def list_directory(usr_input):
         elif i.endswith(".png"):
             my_list.append(i)
     print(Fore.BLUE + str(my_list))
-    
+ 
 def main():
     print("".join(("=",)*40))
     print("".join(("+",)*40))
