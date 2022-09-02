@@ -4,11 +4,15 @@ import os
 import time
 import colorama
 from colorama import Back, Fore, Style #Text with color package
-
 from exiftool import ExifToolHelper #main meta data extraction package
+from os import system, name
 #https://sylikc.github.io/pyexiftool/examples.html
 #have to install pyexiftool
- 
+def clear():
+    if(name == 'nt'):
+        _ = system('cls')
+    else:
+        _ = system('clear')
 
 def exif_tool():
     exif_input = input("Please enter the full directory of the file you want to extract from: ")
@@ -20,7 +24,7 @@ def exif_tool():
 def list_directory(path_input):
     target_files = []
     folder_list = []
-    misc_files = []
+    idk_files = []
     for i in os.listdir(path_input):
         if i.endswith(".jpg"):
             target_files.append(i)
@@ -31,18 +35,18 @@ def list_directory(path_input):
         elif i.endswith(".png"):
             target_files.append(i)
         elif i.startswith("."):
-            misc_files.append(i)
+            idk_files.append(i)
         elif os.path.isdir(path_input):
             folder_list.append(i)
     print(Fore.RED + str(target_files))
     print(Fore.YELLOW + str(folder_list))
-    print(Fore.BLUE + str(misc_files))
+    print(Fore.BLUE + str(idk_files))
     
 
 def main():
-    print(Fore.GREEN + "".join(("=",)*80))
-    print(Fore.GREEN + "".join(("+",)*80))
-    print(Fore.GREEN + "".join(("=",)*80))
+    print(Fore.CYAN + "".join(("=",)*80))
+    print(Fore.CYAN + "".join(("+",)*80))
+    print(Fore.CYAN + "".join(("=",)*80))
     
     #my_stack = []
     print("This is your current directory you are in: " + os.getcwd())
@@ -52,6 +56,7 @@ def main():
     while True: 
         cont_input = input("Do you wish to go further into the directory? (y/n): ")
         if(cont_input.upper() == "Y"):
+            clear()
             usr_input = input("Please enter directory to search for files:  ")
             list_directory(usr_input)
         elif(cont_input.upper() == "N"):
