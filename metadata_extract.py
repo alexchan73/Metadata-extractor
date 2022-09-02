@@ -36,13 +36,13 @@ def list_directory(path_input):
             folder_list.append(i)
     print(Fore.RED + str(target_files))
     print(Fore.YELLOW + str(folder_list))
-    print(Fore.BLUE + str(idk_files))
+    print(Fore.BLUE + str(misc_files))
     
 
 def main():
-    print(FORE.GREEN + "".join(("=",)*80))
-    print(FORE.GREEN + "".join(("+",)*80))
-    print(FORE.GREEN + "".join(("=",)*80))
+    print(Fore.GREEN + "".join(("=",)*80))
+    print(Fore.GREEN + "".join(("+",)*80))
+    print(Fore.GREEN + "".join(("=",)*80))
     
     #my_stack = []
     print("This is your current directory you are in: " + os.getcwd())
