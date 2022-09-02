@@ -7,6 +7,8 @@ What does it do? : You can enter in any files that have EXIF type data to extrac
 
 Why did I make this? : To demonstrate my knowledge on extracting EXIF data from files that could be crucial in investigations. 
 IMPROVEMENTS:
+*09/01/22 : Instead of displaying just files, I created three lists that will store the following: pdf/jpg/txt/png/etc.. , folders, files that start with a ".". 
+* - For those lists, I also color coded them so it can be easier to distinguish
 * Only displays files and color codes them, instead of displaying entire contents. 
 Disclaimer:
 * Do not use this tool for criminal purposes, i.e. stalking,  black hat hacking.
