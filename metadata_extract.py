@@ -1,4 +1,4 @@
-"""Implementing wtf i just did """
+
 #Main project
 import os
 import time
