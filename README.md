@@ -5,11 +5,8 @@ Thank you for coming across my program :)
 
 What does it do? : You can enter in any files that have EXIF type data to extract metadata from. 
 
-Why did I make this? : To demonstrate my knowledge on extracting EXIF data from files that could be crucial in investigations. 
-IMPROVEMENTS:
-*09/01/22 : Instead of displaying just files, I created three lists that will store the following: pdf/jpg/txt/png/etc.. , folders, files that start with a ".". 
-* - For those lists, I also color coded them so it can be easier to distinguish
-* Only displays files and color codes them, instead of displaying entire contents. 
+Why did I make this? : To demonstrate my knowledge on extracting EXIF data from files that could be crucial in investigations in the Digital Forensics Field.
+
 Disclaimer:
 * Do not use this tool for criminal purposes, i.e. stalking,  black hat hacking.
 * By doing so, you are subject to criminal penalties
@@ -18,7 +15,7 @@ TO INSTALL REQUIRED PACKAGES:
 * You must have exiftool downloaded onto your system, here is the link: https://exiftool.org/
 * To use exiftool in python, you must have pyexiftool installed, here is the link: https://sylikc.github.io/pyexiftool/examples.html
 
-HOW TO USE:
+HOW TO USE THE PROGRAM:
 * In the beginning it will display the current directory you are in such as (Users/alex/Documents), it will then ask you to type in the full directory 
 of where you think the file is, in this case it will be in the Documents folder. 
 
@@ -28,7 +25,5 @@ of where you think the file is, in this case it will be in the Documents folder.
 For example: "/Users/alex/Documents/img.txt"
 
 * Then the data should be outputted :)
-
-Not all images and PDFS will contain the data you are looking for, some companies(Google, META) will strip the data for security reasons.
 
 Have fun :)
